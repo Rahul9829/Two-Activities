@@ -2,6 +2,7 @@ package com.example.twoactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,5 +21,9 @@ public class MainActivity extends AppCompatActivity {
     public void launchSecondActivity(View view) {
         //Log Statement Added
         Log.d(LOG_TAG, "Button clicked!");
+
+        //adding intent to move toward another activity
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
